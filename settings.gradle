@@ -1,2 +1,4 @@
+include ':database'
+include ':web'
 include ':app'
 rootProject.name = "SkillTestUpx"

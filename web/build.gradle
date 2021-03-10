@@ -1,0 +1,54 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "API_KEY", "\"bb5422f7651cb5d2149bca7876f99727\""
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "API_KEY", "\"bb5422f7651cb5d2149bca7876f99727\""
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    //Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:$vKtxCore"
+
+    //Testing
+    testImplementation "junit:junit:$vJunit"
+    androidTestImplementation "androidx.test.ext:junit:$vJunitExt"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$vEsspresoCore"
+
+    // Retrofit dependencies
+    api "com.squareup.okhttp3:logging-interceptor:$vLogInterceptor"
+    api "com.squareup.retrofit2:retrofit:$vRetrofit"
+    api "com.squareup.retrofit2:converter-gson:$vRetrofit"
+    api "com.squareup.retrofit2:converter-scalars:$vRetrofit"
+}

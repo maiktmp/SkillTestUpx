@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -30,16 +32,63 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        dataBinding true
+    }
 }
 
 dependencies {
 
+    //Web
+    implementation project(":web")
+
+    //Database
+    implementation project(":database")
+
+    //Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation "androidx.core:core-ktx:$vKtxCore"
+
+    //Android UI
+    implementation "androidx.appcompat:appcompat:$vAppCompat"
+    implementation "com.google.android.material:material:$vAppMaterial"
+    implementation "androidx.constraintlayout:constraintlayout:$vConstraintLayout"
+
+    //Testing
+    testImplementation "junit:junit:$vJunit"
+    androidTestImplementation "androidx.test.ext:junit:$vJunitExt"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$vEsspresoCore"
+
+    //Material IO
+    implementation "com.google.android.material:material:$vMaterial"
+
+    //Progress Button
+    implementation "com.github.razir.progressbutton:progressbutton:$vProgressButton"
+
+    //FireBase
+    implementation platform("com.google.firebase:firebase-bom:$vFBBoom")
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-storage-ktx'
+
+
+    // Google maps for location picker
+    implementation "com.google.android.gms:play-services-location:$vPlayServicesVersion"
+    implementation "com.google.android.gms:play-services-maps:$vPlayServicesVersion"
+
+    // CircularImageView
+    implementation "de.hdodenhof:circleimageview:$vCircularImage"
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$vGlide"
+    annotationProcessor "com.github.bumptech.glide:compiler:$vGlide"
+
+    //LifeCycle
+    implementation "androidx.lifecycle:lifecycle-extensions:$vLifeCycle"
+
+    //Permissions
+    implementation "pub.devrel:easypermissions:$vPermissions"
+
+    //ImagePicker
+    implementation "com.github.dhaval2404:imagepicker:$vImagePicker"
+
 }

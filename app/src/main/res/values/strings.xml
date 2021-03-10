@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">SkillTestUpx</string>
+    <string name="movies">Películas</string>
+    <string name="locations">Localizaciones</string>
+    <string name="images">Imágenes</string>
+    <string name="movies_empty">Al parecer no existen peliculas</string>
+    <string name="validation_require">El campo es requerido</string>
+    <string name="load">Cargando</string>
+    <string name="upload">Subir</string>
+    <string name="lbl_image_empty">Da click en \'+\' para agregar un archivo</string>
+    <string name="denied_file">Para el correcto funcionamiento de la app, es necesario que permita acceder a sus fotos.</string>
+    <string name="denied_location">Para el correcto funcionamiento de la app, es necesario que permita acceder a la ubicación.</string>
+    <string name="success_send_files">Se respaldaron  los arvhivos de forma correcta.</string>
+
+    <string name="error_get_movies">Ups! Ocurrió un error al obtener las películas, inente más tarde</string>
+    <string name="error_get_local_movies">Ups! Ocurrió un error al obtener las películas</string>
+    <string name="error_get_locations">Ups! Ocurrió un error al obtener los lugares, intente más tarde</string>
+    <string name="error_network">Ups! Al parecer no tiene acceso a internet, por favor verifique su conexión</string>
+    <string name="error_upload_file">Ups! Ocurrió un error al enviar algúnos archivos, intente más tarde</string>
+
 </resources>

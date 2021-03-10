@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "412851020310",
+    "project_id": "skill-test-upax",
+    "storage_bucket": "skill-test-upax.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412851020310:android:cf1958531e261ac16acb37",
+        "android_client_info": {
+          "package_name": "mx.com.maiktmp.skilltestupx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412851020310-jfojb3rl67ml8gsgidrphhtf27gco2sv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3Rij2MvjUVr2vLHRYZcCYoMGeHAq9cXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412851020310-jfojb3rl67ml8gsgidrphhtf27gco2sv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

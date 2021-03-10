@@ -1,0 +1,23 @@
+package mx.com.maiktmp.skilltestupx.utils
+
+object Codes {
+
+    // CODES
+    val PERMISSION_FINE_LOCATION = 100
+    val PERMISSION_LOCAL_STORAGE = 102
+
+
+    // REQUEST
+    val REQUEST_IMAGE_PICKER = 200
+
+
+    //Fragment Tags
+    val FRAGMENT_MOVIES = "FRAGMENT_MOVIES"
+    val FRAGMENT_MAPS = "FRAGMENT_MAPS"
+    val FRAGMENT_IMAGES = "FRAGMENT_IMAGES"
+
+    //Service Codes
+
+    val ACTION_START_LOCATION_SERVICE = "ACTION_START_LOCATION_SERVICE"
+    val ACTION_STOP_LOCATION_SERVICE = "ACTION_STOP_LOCATION_SERVICE"
+}
