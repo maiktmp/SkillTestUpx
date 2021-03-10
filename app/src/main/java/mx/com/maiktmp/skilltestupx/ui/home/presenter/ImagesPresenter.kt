@@ -12,9 +12,9 @@ class ImagesPresenter(
     private val repository: FireStoreRepository
 ) : BasePresenter<ImagesView>() {
 
-    fun sendImages(vararg files: File) {
+    fun sendImages(files: ArrayList<File>) {
         view()?.showProgress()
-        repository.uploadFile(*files) {
+        repository.uploadFile(files) {
             view()?.hideProgress()
             if (!it.success) {
                 view()?.handleUnsuccessful(context?.getString(R.string.error_upload_file))

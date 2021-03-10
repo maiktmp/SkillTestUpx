@@ -66,7 +66,7 @@ class ImagesFragment : Fragment(), ImagesView {
 
     private fun setupUploadBtn() {
         vBind.btnUpload.setOnClickListener {
-            presenter.sendImages(*adapter.items.toTypedArray())
+            presenter.sendImages(adapter.items)
             vBind.lblEmpty
         }
     }
@@ -101,6 +101,7 @@ class ImagesFragment : Fragment(), ImagesView {
     }
 
     override fun completeUploadFiles() {
+        vBind.btnUpload.isEnabled = false
         context?.let {
             it.displayToast(it.getString(R.string.success_send_files), Toast.LENGTH_LONG)
         }
