@@ -17,6 +17,7 @@ interface MoviePagerDao {
     @Query("SELECT * FROM movie_pager WHERE page= :page LIMIT 1")
     fun findByPage(page: Int): Maybe<MoviePagerDB>
 
+    @Transaction
     @Query("DELETE FROM movie_pager")
     fun deleteAll(): Completable
 

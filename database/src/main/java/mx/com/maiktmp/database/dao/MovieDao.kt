@@ -16,6 +16,7 @@ interface MovieDao {
     @Query("SELECT * FROM movie WHERE page= :page")
     fun findByPage(page: Int): Maybe<List<MovieDB>>
 
+    @Transaction
     @Query("DELETE FROM movie")
     fun deleteAll(): Completable
 
